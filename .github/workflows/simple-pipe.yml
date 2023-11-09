@@ -54,7 +54,7 @@ jobs:
       with: 
         name: greetings-jar
     - shell: bash
-      run:
+      run: |
         java -jar greetings-actions.jar ${{ github.event.inputs.myValues }}
 
   count-args:
@@ -67,7 +67,7 @@ jobs:
        arguments-to-count: ${{ github.event.inputs.myValues }}
    - run: echo
    - shell: bash
-     run:
+     run: |
        echo argument count is ${{ steps.report-count.outputs.arg-count }}
        exit 1
     
